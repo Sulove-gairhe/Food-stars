@@ -1,0 +1,405 @@
+*{
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{scroll-behavior: smooth;}
+
+                    /*starting of  section-1 */
+
+.topbar{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: white;
+}
+
+
+
+.nav{
+    display: flex;
+        justify-content: center;
+        list-style: none;}
+
+
+
+
+a
+{  font-weight: bold;
+  margin: 15px;
+  color: #ddd;
+  text-decoration: none;
+  text-transform: uppercase;}
+
+  a:hover{
+
+    color:darkred;
+}
+
+
+                 /* explore yourself  wala is under span tag so i needed to use it in css also */
+    .intro{
+        color: white;
+        font-weight: bold;
+        font-size: 39px; 
+    }
+
+
+span{
+    position:absolute;
+        right: 508px;
+        bottom: 250px;
+}
+
+section{
+     width: 100%;
+       display: table;
+         margin: 0; 
+          max-width: 100%;
+            padding:0.2%;
+             }
+                 /* animation part */
+.scroll-down{
+    height: 110px;
+    width: 80px;
+    border: 2px white solid;
+    position: absolute;
+    left: 48%;
+    bottom: 11%;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.scroll-down::before,
+.scroll-down::after{
+
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    border:2px white solid;
+    height: 15px;
+    width: 15px;
+    transform: translate(-50%,-100%) rotate(45deg);
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 1s ease-in-out infinite;
+}
+
+
+.scroll-down::after{
+    top: 30%;
+    animation-delay: .3s;
+}
+
+
+@keyframes scroll-down{
+    0%{
+        opacity: 0;
+    }
+
+    30%{
+        opacity: 1;
+    }
+
+    60%{
+        opacity: 1;
+    }
+ 
+    100%{
+         opacity: 0;
+         top: 90%;
+    }
+     
+}
+
+
+                            /* section-2 */
+   
+   
+
+
+
+   h1{
+       font-size: 2.1rem;
+       line-height: 1.4;
+       letter-spacing: 0.2em;      
+        text-align: center;
+        position: relative;
+       
+   }
+   
+   
+  .slider{
+      width: 900px;
+      height: 500px;
+     
+      margin: 75px auto;
+      animation: slide 20s infinite;
+  }
+
+  @keyframes slide{
+    25%{
+           background: url(wide4.jpg);
+    }
+  
+    50%{
+        background: url(coat.jpg);
+        background-size: cover;
+        
+    }
+ 
+
+    75%{
+       background: url(wide2.jpg);
+   }
+
+    100%{
+        background: url(wide.jpg);
+   }
+
+
+}
+   
+
+
+                   /* section-3 */
+
+            
+   h2{
+       position: absolute;
+       bottom: 470px;
+       right: 47%;
+       font-size: 40px
+   }
+
+h2:hover{
+    color: darkred;
+}
+   
+
+
+.about{
+    border: 2px white groove;
+    border-radius: 10px;
+    padding: 5px;
+    position: relative;
+    line-height: 28px;
+    margin: 10px auto;
+
+}
+   
+.big{
+    position: absolute;
+    bottom: 50%;
+    right: 260px;
+}
+   
+
+   
+   .big:hover{
+       color: darkred;
+   }
+
+   
+   
+ 
+   #sec-1{
+    min-height: 100vh;
+    background-image: url(black-wallpaper-8579-8913-hd-wallpapers.png);
+    color: white;
+    background-size:100% ,95%;
+    background-repeat: no-repeat;
+    position: relative;}
+
+
+#sec-2{min-height: 100vh;
+    background-color: rgba(27, 31, 34,0.85);
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#sec-3{
+    min-height: 100vh;
+    position: relative;
+background-color: slategrey;
+    color: white;
+    position: relative;
+}   
+   
+   
+                /* footer */
+
+    
+footer{
+    background-color:#111;
+    color: #fff;
+    height: auto;
+    width: 202vh;
+    padding-top: 40px;
+    overflow-y:hidden ;
+
+}                
+   
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+
+.socials a{
+    text-decoration: none;
+    color: white;    
+}
+
+.socials a i {
+    font-size: 2.2rem;
+    transition: color .4 ease;
+}
+
+
+.socials a:hover i{
+    color: aqua;
+}
+   
+
+.footer-bottom{
+              background:#000;
+              width:202vh;
+              padding:20px 0;
+              text-align: center;
+}
+
+
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+@media screen and (max-width: 1200px) {
+    body{
+       width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .topbar a {
+      float: none;
+      width: 100%;
+    }
+  }
+
+
+
+@media screen and (max-width: 1200px) {
+    .slider {
+      width: 100%;
+    }
+}
+   
+   
+
+
+@media screen and (max-width: 1200px) {
+  div .scroll-down{
+        border: white;
+        position: relative;
+      bottom: 20%;
+      left: 30%;
+    }
+}
+   
+   
+@media screen and (max-width: 1200px) {
+footer{
+   width: 100%;
+   justify-content: center;
+   text-align: center;
+   overflow: hidden;
+}
+  
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    footer p{
+       width: 100%;
+       justify-content: left;
+       text-align: left;}
+    }
+
+
+    
+    
+   
+    @media screen and (max-width: 1200px) {
+   
+   #sec-1{
+           width: 100%;
+           background-size: cover;
+         }
+   
+    }
+   
+
+
+
+
+    @media screen and (max-width: 1200px) {
+
+       .intro{
+           position: absolute;
+         bottom: 50%;
+         right: 50%;
+        }
+    }
+
+
+
+
+    @media screen and (max-width: 1200px) {
+    
+    span{
+        position: absolute;
+        bottom: 50%;
+        right: 30%;
+    }
+    
+    
+    }
+
+
+
+
+    @media screen and (max-width: 1200px) {
+
+        .big{
+              position:absolute;
+            bottom: 70%;
+        right: 50%;}
+    
+
+        }
+
+
